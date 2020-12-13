@@ -152,7 +152,7 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 		startApp(browser, false);
 	}
 
-	public void type(WebElement ele, String data) {
+	public void type(WebElement ele,String data) {
 		try {
 			ele.clear();
 			ele.sendKeys(data);
@@ -462,7 +462,7 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 
 	public void closeActiveBrowser() {
 		try {
-			driver.close();
+			//driver.close();
 			reportStep("The browser is closed", "PASS", false);
 		} catch (Exception e) {
 			reportStep("The browser could not be closed", "FAIL", false);
@@ -530,5 +530,7 @@ public class WebDriverServiceImpl extends WebDriverListener implements WebDriver
 			reportStep("The element: " + element + " could not be found.", "FAIL"); 
 		}
 	}
+
+	
 
 }
