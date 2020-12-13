@@ -18,7 +18,8 @@ public class TestngListener implements IAnnotationTransformer,IRetryAnalyzer{
 	public void transform(ITestAnnotation annotation,Class testClass, Constructor testConstructor,
 			Method testMethod) {
 		annotation.setRetryAnalyzer(this.getClass());
-		if(testMethod.getName().equals("TestcaseName")) {
+		System.out.println(testMethod.getName());
+		if(testMethod.getName().equals("AssessmentTestCase")) {
 			annotation.setInvocationCount(1);
 		}
 	}

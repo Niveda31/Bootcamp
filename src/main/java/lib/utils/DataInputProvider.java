@@ -21,6 +21,7 @@ public class DataInputProvider{
 
 			// get the number of rows
 			int rowCount = sheet.getLastRowNum();
+			System.out.println("Row Count"+rowCount);
 
 			// get the number of columns
 			int columnCount = sheet.getRow(0).getLastCellNum();

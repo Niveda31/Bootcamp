@@ -7,15 +7,17 @@ import com.aventstack.extentreports.ExtentTest;
 import lib.selenium.PreAndPost;
 
 public class AppLauncherPage extends PreAndPost{
-	
-	public AppLauncherPage(EventFiringWebDriver driver, ExtentTest test) {
-		this.driver = driver;
-		this.test = test;
+
+	public AppLauncherPage(EventFiringWebDriver driver, ExtentTest test)
+	{
+		this.driver=driver;
+		this.test=test;
 	}
 	
-	public ServicePage clickService() {
-		click(locateElement("link", "Service"));
-		return new ServicePage(driver, test);
+	public ServiceConsolePage clickServiceConsole()
+	{
+		click(locateElement("xpath","//p[text()='Service Console']"));
+		return new ServiceConsolePage(driver, test);
+		
 	}
-	
 }
